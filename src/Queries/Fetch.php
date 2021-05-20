@@ -3,7 +3,6 @@
 namespace Elafries\FirestoreModel\Queries;
 
 use Google\Cloud\Firestore\Query;
-use function is_null;
 
 trait Fetch
 {
@@ -32,7 +31,7 @@ trait Fetch
 
     public function findById(string $id): array
     {
-        return $this->getSecureItem(
+        return $this->getSecureReadItem(
             $this->findByIdRaw($id)
         );
     }
@@ -69,7 +68,7 @@ trait Fetch
     {
         return array_map(
             function ($item) {
-                return $this->getSecureItem($item);
+                return $this->getSecureReadItem($item);
             },
             $this->getRaw()
         );
@@ -92,7 +91,7 @@ trait Fetch
     {
         $item = $this->firstRaw();
         if (!is_null($item)) {
-            return $this->getSecureItem($item);
+            return $this->getSecureReadItem($item);
         }
         return null;
     }

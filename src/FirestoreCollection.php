@@ -7,12 +7,6 @@ use Google\Cloud\Firestore\FirestoreClient;
 use Illuminate\Hashing\BcryptHasher;
 use Kreait\Firebase\Firestore;
 use ReflectionClass;
-use function implode;
-use function is_null;
-use function lcfirst;
-use function preg_match_all;
-use function strtolower;
-use function strtoupper;
 
 abstract class FirestoreCollection
 {
