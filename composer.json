@@ -15,8 +15,8 @@
         "illuminate/hashing": "8.*"
     },
     "autoload": {
-        "psr-0": {
-            "FirestoreModel": "src"
-        }
+        "classmap": [
+            "src/"
+        ]
     }
 }
