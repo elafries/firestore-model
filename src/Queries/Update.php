@@ -18,6 +18,18 @@ trait Update
         $document->update($this->getUpdateItem($updatableItem));
     }
 
+    public function update(array $updateValues): void
+    {
+        $documents = $this->query->documents();
+        $this->query = null;
+
+        foreach ($documents as $document) {
+            if ($document->exists()) {
+                $this->updateById($document->id(), $updateValues);
+            }
+        }
+    }
+
     protected function getUpdateItem(array $item): array
     {
         $secureItem = $this->getSecureWriteItem($item);
