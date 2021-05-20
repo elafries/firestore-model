@@ -1,0 +1,14 @@
+{
+    "name": "elafries/firestore-model",
+    "description": "A firestore model for laravel or lumen",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Balazs Bereczky",
+            "email": "bereczkybalazs1@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
