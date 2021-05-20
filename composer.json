@@ -9,7 +9,6 @@
             "email": "bereczkybalazs1@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
         "google/cloud-firestore": "^1.19",
         "kreait/laravel-firebase": "^3.1",
