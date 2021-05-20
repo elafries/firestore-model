@@ -13,7 +13,7 @@
     "require": {
         "google/cloud-firestore": "^1.19",
         "kreait/laravel-firebase": "^3.1",
-        "illuminate/hashing": "^8.42"
+        "illuminate/hashing": "8.*"
     },
     "autoload": {
         "psr-0": {
