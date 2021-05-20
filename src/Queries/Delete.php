@@ -1,6 +1,6 @@
 <?php
 
-namespace FirestoreModel\Queries;
+namespace Elafries\FirestoreModel\Queries;
 
 trait Delete
 {

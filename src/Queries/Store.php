@@ -1,6 +1,6 @@
 <?php
 
-namespace FirestoreModel\Queries;
+namespace Elafries\FirestoreModel\Queries;
 
 use function array_reduce;
 use function in_array;

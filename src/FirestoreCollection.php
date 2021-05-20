@@ -1,6 +1,6 @@
 <?php
 
-namespace FirestoreModel;
+namespace Elafries\FirestoreModel;
 
 use Google\Cloud\Firestore\CollectionReference;
 use Google\Cloud\Firestore\FirestoreClient;

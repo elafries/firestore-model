@@ -1,6 +1,6 @@
 <?php
 
-namespace FirestoreModel\Queries;
+namespace Elafries\FirestoreModel\Queries;
 
 use Google\Cloud\Firestore\Query;
 use function is_null;

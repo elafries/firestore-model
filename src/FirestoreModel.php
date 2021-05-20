@@ -1,10 +1,10 @@
 <?php
 
-namespace FirestoreModel;
+namespace Elafries\FirestoreModel;
 
-use FirestoreModel\Queries\Delete;
-use FirestoreModel\Queries\Fetch;
-use FirestoreModel\Queries\Store;
+use Elafries\FirestoreModel\Queries\Delete;
+use Elafries\FirestoreModel\Queries\Fetch;
+use Elafries\FirestoreModel\Queries\Store;
 use function array_keys;
 use function array_reduce;
 use function in_array;
