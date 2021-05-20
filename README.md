@@ -20,18 +20,28 @@ use Elafries\FirestoreModel\FirestoreModel;
 class User extends FirestoreModel {
 
     protected array $fillable = [
-       'email', 'division' // When you insert to the database these fields will be added ONLY!
+       'name', 'age', 'weight'
     ];
 
     protected array $hidden = [
-        'password', // When you fetch from the database, these fields will be hidden
+        'password',
     ];
 
     protected array $secure = [
-        'password', // When you insert/update the database these fields will be encrypted.
+        'password',
     ];
 }
 ```
+
+####`fillable`
+When you insert to the database these fields will be added and the `secure` fields **ONLY**!
+
+#### `hidden`
+When you fetch from the database, these fields will be hidden
+
+#### `secure`
+When you insert/update the database these fields will be encrypted.  
+When you insert to the database, it will extend the fillable parameters.
 
 ### Using a model via dependency injection
 ```php 
@@ -115,4 +125,44 @@ $this->user
     ->where('name', '=', 'test')
     ->where('age', '>', '33')
     ->exists();
+```
+
+## Insert `:array`
+```php
+$this->user->create([
+    'name' => 'Bill Buffalo',
+    'age' => 43,
+    'weight' => 92,
+    'password' => 'secret'
+]);
+```
+
+## Update
+
+### Update by id `:void`
+```php
+$this->user->updateById('2asd123a23a', [
+    'age' => 51,
+    'weight' => 97,
+]);
+```
+
+### Update all which match the query `:void`
+```php
+$this->user
+    ->where('name', '=', 'test')
+    ->where('age', '>', '33')
+    ->update([
+        'age' => 51,
+        'weight' => 97,
+    ]);
+```
+
+## Delete
+### Delete all which match the query `:void`
+```php
+$this->user
+    ->where('name', '=', 'test')
+    ->where('age', '>', '33')
+    ->delete();
 ```
