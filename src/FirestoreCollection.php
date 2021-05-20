@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Modules\FirestoreModel;
+namespace FirestoreModel;
 
 use Google\Cloud\Firestore\CollectionReference;
 use Google\Cloud\Firestore\FirestoreClient;
 use Illuminate\Hashing\BcryptHasher;
-use JetBrains\PhpStorm\Pure;
 use Kreait\Firebase\Firestore;
 use ReflectionClass;
-
 use function implode;
 use function is_null;
 use function lcfirst;
@@ -35,7 +33,7 @@ abstract class FirestoreCollection
         }
     }
 
-    #[Pure] public function getDatabase(): FirestoreClient
+    public function getDatabase(): FirestoreClient
     {
         return $this->firestore->database();
     }

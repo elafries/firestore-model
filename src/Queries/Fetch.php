@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Modules\FirestoreModel\Queries;
+namespace FirestoreModel\Queries;
 
 use Google\Cloud\Firestore\Query;
-
 use function is_null;
 
 trait Fetch

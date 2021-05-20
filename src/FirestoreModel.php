@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Modules\FirestoreModel;
+namespace FirestoreModel;
 
-use App\Modules\FirestoreModel\Queries\Delete;
-use App\Modules\FirestoreModel\Queries\Fetch;
-use App\Modules\FirestoreModel\Queries\Store;
-
+use FirestoreModel\Queries\Delete;
+use FirestoreModel\Queries\Fetch;
+use FirestoreModel\Queries\Store;
 use function array_keys;
 use function array_reduce;
 use function in_array;
