@@ -33,7 +33,7 @@ class User extends FirestoreModel {
 }
 ```
 
-####`fillable`
+#### `fillable`
 When you insert to the database these fields will be added and the `secure` fields **ONLY**!
 
 #### `hidden`
