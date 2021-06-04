@@ -19,6 +19,8 @@ use Elafries\FirestoreModel\FirestoreModel;
 
 class User extends FirestoreModel {
 
+    protected ?string $table = 'user';
+
     protected array $fillable = [
        'name', 'age', 'weight'
     ];
@@ -32,6 +34,13 @@ class User extends FirestoreModel {
     ];
 }
 ```
+
+#### `table`
+This is an optional parameter.  
+The name will be generated from the lowercase classname joined with underscores.
+eg:  
+`ThisIsATable >> this_is_a_table`  
+If you fill the `$table` variable the table name will be overriden by its value. 
 
 #### `fillable`
 When you insert to the database these fields will be added and the `secure` fields **ONLY**!
