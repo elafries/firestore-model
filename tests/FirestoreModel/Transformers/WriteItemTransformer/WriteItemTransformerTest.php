@@ -28,6 +28,12 @@ class WriteItemTransformerTest extends TestCase
         $this->assertCount(1, $response);
     }
 
+    public function test_on_non_fillable_item()
+    {
+        $response = $this->model->getSecureWriteItem(['bela' => 'test']);
+        $this->assertEmpty($response);
+    }
+
     public function test_on_id()
     {
         $response = $this->model->getSecureWriteItem(['id' => '2s']);
