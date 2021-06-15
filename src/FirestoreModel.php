@@ -28,7 +28,13 @@ abstract class FirestoreModel extends FirestoreCollection
         $itemKeys = array_keys($item);
         sort($itemKeys);
         return array_reduce($itemKeys, function ($accumulator, $currentKey) use ($item) {
-            if (!in_array($currentKey, $this->hidden) && in_array($currentKey, $this->fillable)) {
+            if (
+                !in_array($currentKey, $this->hidden) &&
+                (
+                    in_array($currentKey, $this->fillable) ||
+                    $currentKey === 'id'
+                )
+            ) {
                 $accumulator[$currentKey] = $item[$currentKey];
             }
             return $accumulator;
