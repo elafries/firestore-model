@@ -1,24 +1,16 @@
 <?php
 
-namespace Tests\FirestoreModel\Transformers;
+namespace Tests\FirestoreModel\Transformers\ReadItemTransformer;
 
-use Elafries\FirestoreModel\Transformers\ReadItemTransformer;
 use Monolog\Test\TestCase;
-
-class Model {
-    use ReadItemTransformer;
-
-    protected $fillable = ['name', 'email'];
-    protected $hidden = ['password'];
-}
 
 class ReadItemTransformerTest extends TestCase
 {
-    private Model $model;
+    private ReadItemTransformerModel $model;
 
     public function setUp(): void
     {
-        $this->model = new Model();
+        $this->model = new ReadItemTransformerModel();
     }
 
     public function test_on_empty_items()

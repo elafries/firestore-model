@@ -9,7 +9,7 @@ use function in_array;
 
 trait WriteItemTransformer
 {
-    protected function getSecureWriteItem(array $item): array
+    public function getSecureWriteItem(array $item): array
     {
         return array_reduce(array_keys($item), function ($accumulator, $currentKey) use ($item) {
             if (in_array($currentKey, $this->secure)) {
