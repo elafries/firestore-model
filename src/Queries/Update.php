@@ -9,13 +9,8 @@ trait Update
     public function updateById(string $id, array $updateValues): void
     {
         $document = $this->getCollection()->document($id);
-        $updatableItem = $document->snapshot()->data();
 
-        foreach ($updateValues as $key => $updateValue) {
-            $updatableItem[$key] = $updateValue;
-        }
-
-        $document->update($this->getUpdateItem($updatableItem));
+        $document->update($this->getUpdateItem($updateValues));
     }
 
     public function update(array $updateValues): void
