@@ -2,17 +2,21 @@
 
 ## Initilaization
 
-Set up credential file
+### Set up credential file
 Create and download a credential for service account  
 https://console.firebase.google.com/u/0/project/`${PROJECT_ID}`/settings/serviceaccounts/adminsdk  
 Copy the credential.json of the service account to root directory
 eg: `firebase-credential.json`
 
-Set up `.env`  
+### Set up `.env`  
 ```
 GOOGLE_CLOUD_PROJECT=google-project-id
 GOOGLE_APPLICATION_CREDENTIALS=/absolute/path/to/credential/file.json
 ```
+
+### Register service provider
+Add this line to `bootstrap/app.php`  
+```$app->register(Kreait\Laravel\Firebase\ServiceProvider::class);```
 
 ## Creating a model
 
