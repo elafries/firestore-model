@@ -3,6 +3,8 @@
 ## Initilaization
 
 Set up credential file
+Create and download a credential for service account  
+https://console.firebase.google.com/u/0/project/`${PROJECT_ID}`/settings/serviceaccounts/adminsdk  
 Copy the credential.json of the service account to root directory
 eg: `firebase-credential.json`
 
