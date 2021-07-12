@@ -7,10 +7,10 @@ Copy the credential.json of the service account to root directory
 eg: `firebase-credential.json`
 
 Set up `.env`  
-`
-GOOGLE_CLOUD_PROJECT=google-project-id  
+```
+GOOGLE_CLOUD_PROJECT=google-project-id
 GOOGLE_APPLICATION_CREDENTIALS=/absolute/path/to/credential/file.json
-`
+```
 
 ## Creating a model
 
